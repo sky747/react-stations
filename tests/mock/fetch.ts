@@ -199,7 +199,7 @@ const mockApiRoutes: {
 ]
 
 export const fetchMock: typeof window.fetch = (resource, ..._) => {
-  const url = typeof resource === 'string' ? resource : resource.url
+  const url = typeof resource === 'string' ? resource : (resource as unknown as Request).url
   const handler = mockApiRoutes.find(r => r.test.test(url))
   if (!handler) {
     throw new Error(`unhandled API route "${url}". Did you read the manual?`)

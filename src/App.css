@@ -1,0 +1,21 @@
+h1 {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.Dog-main {
+  text-align: center;
+}
+
+.button {
+  display: block;
+  margin: 20px auto 0;
+}
+
+.display-button {
+  margin: 0 10px;
+}
+
+li {
+  display: flex;
+}
